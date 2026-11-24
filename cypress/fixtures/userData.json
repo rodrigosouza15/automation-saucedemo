@@ -1,0 +1,12 @@
+{
+  "login": {
+    "loginSuccess": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "loginFail": {
+      "username": "locked_out_user",
+      "password": "secret_sauce"
+    }
+}
+}
