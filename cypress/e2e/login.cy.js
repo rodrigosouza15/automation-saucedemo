@@ -8,8 +8,8 @@ const loginPage = new LoginPage()
 describe('Login', () => {
   beforeEach(() => {
     loginPage.accessLoginPage()
-  }
-  )
+  })
+  
   it('Login success', () => {
     loginPage.loginWithAnyUser(userData.login.loginSuccess.username, userData.login.loginSuccess.password)
     loginPage.checkLoginSuccess()

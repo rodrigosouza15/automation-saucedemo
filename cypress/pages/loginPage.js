@@ -1,6 +1,6 @@
 class LoginPage {
 
-    selectorList() {
+    selectorList(){
         const selectors = {
             usernameField: '[data-test="username"]',
             passwordField: '[data-test="password"]',
@@ -10,7 +10,7 @@ class LoginPage {
         return selectors
     }
 
-    accessLoginPage() {
+    accessLoginPage(){
         cy.visit("/");
     }
 
@@ -21,13 +21,12 @@ class LoginPage {
 
     }
 
-    checkLoginSuccess() {
-        cy.contains('Products').should('be.visible')
+    checkLoginSuccess(){
+        cy.url().should('include', '/inventory.html')
     }
 
-    checkLoginFail() {
-        cy.get(this.selectorList().errorMessage).should('contain', 'Epic sadface: Sorry, this user has been locked out.')
-
+    checkLoginFail(){
+          cy.get(this.selectorList().errorMessage).should('contain', 'Epic sadface: Sorry, this user has been locked out.')
     }
 }
 
